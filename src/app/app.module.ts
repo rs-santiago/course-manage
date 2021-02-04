@@ -9,14 +9,21 @@ import { ReplacePipe } from './pipe/replace.pipe';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { RouterModule } from '@angular/router';
 import { Error404 } from './error404/error404.component';
+import { CourseInfoComponent } from './courses/course-info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+
     CourseListComponent,
+    CourseInfoComponent,
+    
     StarComponent,
+    
     ReplacePipe,
+    
     NavBarComponent,
+    
     Error404
   ],
   imports: [
@@ -31,6 +38,10 @@ import { Error404 } from './error404/error404.component';
       {
         path: 'course',
         component: CourseListComponent
+      },
+      {
+        path: 'courses/info/:id',
+        component: CourseInfoComponent
       },
       {
         path: '**',
