@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule} from '@angular/forms';
 
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppComponent } from './app.component';
 import { CourseListComponent } from './courses/course-list.component';
 import { StarComponent } from './star/star.component';
@@ -14,21 +16,17 @@ import { CourseInfoComponent } from './courses/course-info.component';
 @NgModule({
   declarations: [
     AppComponent,
-
     CourseListComponent,
     CourseInfoComponent,
-    
-    StarComponent,
-    
-    ReplacePipe,
-    
+    StarComponent,    
+    ReplacePipe,    
     NavBarComponent,
-    
     Error404
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     RouterModule.forRoot([
       {
         path: '',
