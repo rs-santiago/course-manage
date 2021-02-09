@@ -42,6 +42,10 @@ import { CourseInfoComponent } from './courses/course-info.component';
         component: CourseInfoComponent
       },
       {
+        path: 'courses/info',
+        component: CourseInfoComponent
+      },
+      {
         path: '**',
         component: Error404
       }
